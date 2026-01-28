@@ -166,3 +166,26 @@ mobileMenu.querySelectorAll("a").forEach(link => {
     mobileMenu.classList.remove("active");
   });
 });
+function openEmail() {
+  const email = "ravinderpuri23@gmail.com";
+  const subject = encodeURIComponent("Portfolio Inquiry");
+  const body = encodeURIComponent(
+    "Hi Ravi,\n\nI visited your portfolio and would like to connect.\n\nThanks"
+  );
+
+  showToast("Opening email app…");
+
+  setTimeout(() => {
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+  }, 800);
+}
+
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.innerText = message;
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2500);
+}
