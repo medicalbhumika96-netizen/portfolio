@@ -1214,3 +1214,44 @@ html{
     display:none;
   }
 }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+@media (max-width: 768px) {
+
+  .nav {
+    padding: 0 16px;
+  }
+
+  .hero {
+    padding: 120px 16px 60px;
+  }
+
+  .projects,
+  .skills,
+  .skills-exp,
+  .contact {
+    padding: 80px 16px;
+  }
+}
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  bottom: 50px;
+}
